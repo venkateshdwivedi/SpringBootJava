@@ -13,7 +13,7 @@ public class SpringbootdemoApplication {
 		
 		Alien obj=context.getBean(Alien.class);
 		obj.code();
-
+		 
 		context.close();
 	}
 
