@@ -1,14 +1,20 @@
 package com.example.springbootdemo;
 
+// import org.apache.catalina.core.ApplicationContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class SpringbootdemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootdemoApplication.class, args);
+		ConfigurableApplicationContext context= SpringApplication.run(SpringbootdemoApplication.class, args);
 		
+		Alien obj=context.getBean(Alien.class);
+		obj.code();
+
+		context.close();
 	}
 
 }
