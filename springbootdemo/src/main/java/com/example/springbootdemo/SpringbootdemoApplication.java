@@ -12,6 +12,7 @@ public class SpringbootdemoApplication {
 		ConfigurableApplicationContext context= SpringApplication.run(SpringbootdemoApplication.class, args);
 		
 		Alien obj=context.getBean(Alien.class);
+		System.out.println("age is "+obj.getAge());
 		obj.code();
 		 
 		context.close();
